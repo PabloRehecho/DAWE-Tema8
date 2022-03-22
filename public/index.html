@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Ejer 8.1</title>
+	<link rel="stylesheet" type=text/css media="all" href="filedrag.css" />
+</head>
+<body>
+	<form id="upload" method="POST" enctype="multipart/form-data">	
+		<fieldset id="datosCliente">
+			<legend>Datos del cliente</legend>
+			Nombre: 
+			<input id="nombre" placeholder="Introduce tu nombre" autofocus>
+			<br><br>			
+			Teléfono: 
+			<input type="tel" id="teléfono" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" placeholder="Patrón 123-456-789">
+			<br><br>			
+			E-mail: 
+			<input type="email" id="mail" placeholder="Introduce tu dirección de correo electrónico">
+			<br>		
+		</fieldset>
+		<br>
+		
+		<fieldset id="libros">
+			<legend>Datos del cliente</legend>
+			<select id="libro" name="libro">
+				<option value="0"></option>
+				<option value="1">Harry Potter y la piedra filosofal</option>
+				<option value="2">Harry Potter y la cámara secreta</option>
+				<option value="3">Harry Potter y el prisionero de Azkaban</option>
+				<option value="4">Harry Potter y el cáliz de fuego </option>
+				<option value="5">Harry Potter y la Orden del Fénix</option>
+			</select>
+			Cantidad (Máx. 5):
+			<input type="number" id="numero" min="1" max="5" step="1">
+			<br><br>
+		</fieldset>
+		<br>
+		
+		<fieldset id="enviarFicheros">
+			<input type="file" id="fileselect" name="fileselect" multiple>
+			<div id="filedrag">arrastra aqui tus ficheros
+		</fieldset>
+		<br>		
+		<input type="submit" id="enviar" value="Enviar">		
+	</form>
+	
+	<div id="messages">
+		<p>Mensajes de estado</p>
+	</div>
+	
+	<script src = "filedrag.js"></script>
+</body>
+</html>
